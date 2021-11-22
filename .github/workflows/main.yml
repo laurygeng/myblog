@@ -22,24 +22,22 @@ jobs:
       # 运行命令，npm install && npm run build
       - name: npm install and build
         run: |
-          npm install
-          npm run build
+          yarn
+          yarn run build
         env:
           CI: true
       # 部署到腾讯云服务器
       - name: Deploy to Server
-        uses: easingthemes/ssh-deploy@v2.0.7
+        uses: appleboy/scp-action@master
         env:
             # 本地.ssh文件下的私钥id_rsa，存在secrets的TOKEN中
             SSH_PRIVATE_KEY: ${{ secrets.TOKEN }} 
             # 复制操作的参数。"-avzr --delete"意味部署时清空服务器目标目录下的文件
-            ARGS: "-avzr --delete" 
             # 源目录，相对于$GITHUB_WORKSPACE根目录的路径
-            SOURCE: "docs/.vitepress/dist/" 
+            SOURCE: "./docs/.vitepress/dist/*" 
             # 服务器域名
             REMOTE_HOST: "81.70.6.77" 
             # 腾讯云默认用户名为root
             REMOTE_USER: "root" 
             # 目标目录
             TARGET: "~/source/myself/dist/" 
-
