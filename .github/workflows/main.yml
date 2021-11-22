@@ -36,4 +36,4 @@ jobs:
         username: 'root'
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         source: './docs/*'
-        target: "/source/myself"
+        target: "/root/source/myself/dist/"
