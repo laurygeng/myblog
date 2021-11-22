@@ -18,7 +18,7 @@ jobs:
     - name: use Node.js 14
         uses: actions/setup-node@v1
         with:
-          node-version: 14
+          node-version: [14.x]
 
       # 运行命令，npm install && npm run build
       - name: npm install and build
