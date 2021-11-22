@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest # 跑workflow的服务器系统
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [14.x]
 
     steps: # job的一系列动作
       # 切换分支获取源码
@@ -23,7 +23,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-        
+
       # 运行命令，npm install && npm run build
       - name: npm install and build
         run: |
