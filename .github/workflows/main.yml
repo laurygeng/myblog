@@ -35,7 +35,5 @@ jobs:
         passphrase: '77'
         username: 'root'
         key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: 22
-        rm: true
         source: './docs/*'
         target: "/source/myself"
