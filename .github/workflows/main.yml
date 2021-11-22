@@ -27,7 +27,7 @@ jobs:
     - name: npm install, build, and test
       run: |
         yarn
-        yarn run build
+        yarn build
     - name: deploy file to server
       uses: appleboy/scp-action@master
       with:
@@ -38,4 +38,4 @@ jobs:
         port: 22
         rm: true
         source: './docs/.vitepress/dist'
-        target: "~/source/myself/"
+        target: "/source/myself"
