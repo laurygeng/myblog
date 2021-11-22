@@ -8,7 +8,7 @@ actionText: Get Started
 actionLink: /HTML/
 features:
   - title: 旅行
-    details: 视野和心胸都会更开阔
+    details: 视野会更开阔
   - title: 技术
     details: 不喜亦不惧
   - title: 读书
