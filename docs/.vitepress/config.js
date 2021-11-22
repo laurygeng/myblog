@@ -2,7 +2,7 @@ module.exports = {
     // 网站标题
     title: '爱在几米之瑶',
     // 网站描述
-    description: 'laury的个人主页',
+    description: 'laury的主页',
     // 打包目录
     dest: './dist',
     head: [
