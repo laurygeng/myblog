@@ -32,8 +32,9 @@ jobs:
       uses: appleboy/scp-action@master
       with:
         host: ${{ secrets.SERVER_IP }}
-        passphrase: '77'
+        passphrase: ${{ secrets.PASSPHRASE }} 
         username: 'root'
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         source: './docs/*'
         target: "/root/source/myself/dist/"
+        strip_components: 3
