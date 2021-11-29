@@ -3,12 +3,13 @@
         "dev": "vitepress dev docs",
         "build": "vitepress build docs",
         "serve": "vitepress serve docs"
-      },
+    },
     "name": "myblog",
     "version": "1.0.0",
     "main": "index.js",
     "license": "MIT",
     "devDependencies": {
+        "sass": "^1.43.5",
         "vitepress": "^0.20.1"
     }
 }
