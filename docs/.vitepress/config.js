@@ -38,7 +38,7 @@ function getSidebar () {
     {
       text: 'HTML',
       children: [
-        { text: '基础', link: '/Html/' },
+        { text: '基础', link: '/HTML/' },
       ],
     },
     {

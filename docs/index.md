@@ -5,7 +5,7 @@ heroAlt: Logo image
 heroText: 记录生活
 tagline: 技术学习
 actionText: Get Started
-actionLink: /Html/
+actionLink: /HTML/
 heroImage: /image/self.png
 
 # ![avatar](/image/self.png)

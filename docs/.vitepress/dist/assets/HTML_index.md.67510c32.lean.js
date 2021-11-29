@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a,d as r}from"./app.bffa3822.js";const T='{"title":"1.script\u6807\u7B7E\u4E2Ddefer\u548Casync\u7684\u533A\u522B ####","description":"","frontmatter":{},"relativePath":"HTML/index.md","lastUpdated":1638165133815}',s={},c=r('',15),i=[c];function d(n,o,p,h,_,m){return a(),t("div",null,i)}var D=e(s,[["render",d]]);export{T as __pageData,D as default};
