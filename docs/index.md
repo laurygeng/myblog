@@ -6,7 +6,7 @@ heroText: 记录生活
 tagline: 技术学习
 actionText: Get Started
 actionLink: /HTML/
-heroImage: /image/self.png
+heroImage: /images/self.png
 
 # ![avatar](/image/self.png)
 
