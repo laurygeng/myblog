@@ -1,12 +1,16 @@
 ---
 home: true
-// heroImage: /favicon.ico
+
 heroAlt: Logo image
 heroText: 记录生活
 tagline: 技术学习
 actionText: Get Started
 actionLink: /HTML/
-features:
+heroImage: /image/self.png
+
+# ![avatar](/image/self.png)
+
+# features:
   # - title: 旅行
   #   details: 视野开阔
   # - title: 技术

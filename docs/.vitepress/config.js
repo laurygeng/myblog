@@ -85,97 +85,94 @@ function getSidebar () {
     {
       text: 'Vue',
       children: [
-        { text: 'Vue3的新特性', link: '/Vue/' },
-        { text: 'Vue diff', link: '/Vue/advanced' },
-        { text: '组件化的理解', link: '/Javascript/type' },
-        { text: '计算属性和监听器', link: '/Javascript/advanced' },
-        { text: 'Vue生命周期', link: '/Javascript/' },
-        { text: '复用模式', link: '/Javascript/advanced' },
-        { text: 'Vue的设计理念响应式的理解', link: '/Javascript/' },
-        { text: 'Vue-Router路由守卫', link: '/Javascript/advanced' },
-        { text: 'Vue的性能优化', link: '/Javascript/advanced' },
-        { text: 'NextTick', link: '/Javascript/' },
-        { text: 'Vuex', link: '/Javascript/advanced' },
-        { text: '组件间的通信', link: '/Javascript/code1' },
-        { text: '组件复用及扩展', link: '/Javascript/type' },
+        { text: 'Vue3的新特性', link: '/Vue/new' },
+        { text: 'Vue diff', link: '/Vue/diff' },
+        { text: '计算属性和监听器', link: '/Vue/computed' },
+        { text: 'NextTick', link: '/Vue/nextTick' },
+        { text: 'Vue生命周期', link: '/Vue/lifecycle' },
+        { text: '复用模式', link: '/Vue/reuse' },
+        { text: 'Vue的设计理念响应式的理解', link: '/Vue/reactive' },
+        { text: 'Vue-Router路由守卫', link: '/Vue/router' },
+        { text: 'Vue的性能优化', link: '/Vue/performance' },
+        { text: '组件间的通信', link: '/Vue/comunicate' },
+        { text: 'Vuex', link: '/Vue/vuex' }
       ]
     },
     {
       text: 'React',
       children: [
-        { text: '优势&对比Vue框架', link: '/Javascript/type' },
-        { text: '单向数据流双向绑定', link: '/Javascript/advanced' },
-        { text: 'React生命周期', link: '/Javascript/' },
-        { text: '复用模式', link: '/Javascript/advanced' },
-        { text: 'Hooks', link: '/Javascript/' },
-        { text: 'SetState是同步还是异步', link: '/Javascript/advanced' },
-        { text: 'Virtual DOM', link: '/Javascript/advanced' },
-        { text: 'React Diff', link: '/Javascript/' },
-        { text: 'React性能优化', link: '/Javascript/advanced' },
-        { text: 'React源码解析', link: '/Javascript/code1' },
-        { text: 'Redux', link: '/Javascript/type' },
-        { text: 'Mobx', link: '/Javascript/advanced' },
-        { text: 'Dva', link: '/Javascript/' }
+        { text: '优势&对比Vue框架', link: '/React/compare' },
+        { text: '单向数据流双向绑定', link: '/React/dataflow' },
+        { text: 'React生命周期', link: '/React/lifecycle' },
+        { text: '复用模式', link: '/React/reuse' },
+        { text: 'Hooks', link: '/React/hooks' },
+        { text: 'SetState是同步还是异步', link: '/React/setstate' },
+        { text: 'Virtual DOM', link: '/React/virtualdom' },
+        { text: 'React Diff', link: '/React/diff' },
+        { text: 'React性能优化', link: '/React/performance' },
+        { text: 'React源码解析', link: '/React/sourcecode' },
+        { text: 'Redux', link: '/React/redux' },
+        { text: 'Mobx', link: '/React/mobx' },
+        { text: 'Dva', link: '/React/dva' }
       ]
     },
     {
       text: '工程化',
       children: [
-        { text: 'webpack', link: '/Javascript/type' },
-        { text: '项目构建', link: '/Network/' },
-        { text: 'nginx', link: '/Network/advanced' },
-        { text: '持续集成', link: '/Network/' },
-        { text: '版本控制', link: '/Network/advanced' },
+        { text: 'webpack', link: '/Project/webpack' },
+        { text: '项目构建', link: '/Project/cli' },
+        { text: 'nginx', link: '/Project/nginx' },
+        { text: '持续集成', link: '/Project/cicd' },
+        { text: '版本控制', link: '/Project/git' },
       ]
     },
     {
       text: '模块化',
       children: [
-        { text: 'ESMoule&CommonJs', link: '/Javascript/type' },
+        { text: 'ESMoule&CommonJs', link: '/Module/' },
       ]
     },
     {
       text: '网络',
       children: [
-        { text: '基础', link: '/Vue/' },
-        { text: '进阶', link: '/Vue/advanced' },
+        { text: '基础', link: '/NetWork/' },
       ]
     },
     {
       text: '浏览器',
       children: [
-        { text: '进程与线程', link: '/Network/' },
-        { text: '缓存', link: '/Network/advanced' },
-        { text: '渲染原理', link: '/Network/' },
-        { text: '本地存储', link: '/Network/advanced' },
-        { text: '同源策略', link: '/Network/' },
-        { text: '事件机制', link: '/Network/advanced' },
-        { text: '垃圾回收', link: '/Network/advanced' }
+        { text: '进程与线程', link: '/Browser/process' },
+        { text: '缓存', link: '/Browser/cache' },
+        { text: '渲染原理', link: '/Browser/render' },
+        { text: '本地存储', link: '/Browser/localstore' },
+        { text: '同源策略', link: '/Browser/sameorigin' },
+        { text: '事件机制', link: '/Browser/eventloop' },
+        { text: '垃圾回收', link: '/Browser/garbage' }
       ]
     },
     {
       text: '安全',
       children: [
-        { text: 'XSS', link: '/Security/' },
-        { text: 'CSRF', link: '/Security/advanced' },
-        { text: 'SQL注入', link: '/Network/' },
-        { text: 'DNS劫持', link: '/Network/advanced' },
-        { text: 'HTTP劫持', link: '/Network/' },
-        { text: 'DDOS', link: '/Network/advanced' },
-        { text: 'Samesite Cookie', link: '/Network/' },
-        { text: '中间人攻击', link: '/Network/advanced' },
-        { text: '前端安全问题', link: '/Network/advanced' }
+        { text: '前端安全问题', link: '/Security/' },
+        { text: 'XSS', link: '/Security/xss' },
+        { text: 'CSRF', link: '/Security/csrf' },
+        { text: 'SQL注入', link: '/Security/sql' },
+        { text: 'DNS劫持', link: '/Security/dns' },
+        { text: 'HTTP劫持', link: '/Security/http' },
+        { text: 'DDOS', link: '/Security/ddos' },
+        { text: 'Samesite Cookie', link: '/Security/samesite' },
+        { text: '中间人攻击', link: '/Security/attack' }
       ]
     },
     {
       text: '算法',
       children: [
-        { text: '排序', link: '/Security/' },
-        { text: '查找', link: '/Security/advanced' },
-        { text: '树', link: '/Security/' },
-        { text: '链表', link: '/Security/advanced' },
-        { text: '堆', link: '/Network/' },
-        { text: '栈', link: '/Network/advanced' },
+        { text: '排序', link: '/Algorithm/sort' },
+        { text: '查找', link: '/Algorithm/search' },
+        { text: '树', link: '/Algorithm/tree' },
+        { text: '链表', link: '/Algorithm/link' },
+        { text: '堆', link: '/Algorithm/heap' },
+        { text: '栈', link: '/Algorithm/stack' },
       ]
     },
   ]
