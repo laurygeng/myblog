@@ -11,5 +11,8 @@
     "devDependencies": {
         "sass": "^1.43.5",
         "vitepress": "^0.20.1"
+    },
+    "dependencies": {
+        "stylus": "^0.55.0"
     }
 }

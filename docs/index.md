@@ -8,8 +8,6 @@ actionText: Get Started
 actionLink: /HTML/
 heroImage: /images/self.png
 
-# ![avatar](/image/self.png)
-
 # features:
   # - title: 旅行
   #   details: 视野开阔
@@ -20,8 +18,3 @@ heroImage: /images/self.png
 footer: Copyright © 2021-present LauryGeng
 ---
 
-<style lang="sass">
-:root 
-  --c-brand: #646cff
-  --c-brand-light: #747bff
-</style>
