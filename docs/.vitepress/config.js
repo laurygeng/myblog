@@ -61,11 +61,11 @@ function getSidebar () {
           children: [
             { text: '数据类型', link: '/Javascript/type' },
             { text: '原型和原型链', link: '/Javascript/prototype' },
+            { text: '继承', link: '/Javascript/inherit' },
             { text: '作用域和作用域链', link: '/Javascript/scope' },
             { text: '闭包', link: '/Javascript/closure' },
             { text: 'This', link: '/Javascript/this' },
             { text: 'ES6', link: '/Javascript/es6' },
-            { text: '继承', link: '/Javascript/inherit' },
             { text: '手写代码-基础', link: '/Javascript/code1' }
           ]
         },

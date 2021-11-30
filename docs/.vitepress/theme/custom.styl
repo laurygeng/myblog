@@ -102,7 +102,6 @@ a.sidebar-link-item.active{
   display: block;
   height: 40px;
   width: 100%;
-  background url("/md.png") 0 0 no-repeat
   margin-bottom: -7px;
   background-size: 40px;
 }
@@ -207,18 +206,16 @@ a.sidebar-link-item.active{
 .container kbd,
 .container pre {
   font-family: monospace,monospace;
-  font-size: 1em;
+  font-size: 1em !important;
 }
 
 .container pre {
   line-height 15px
-  box-shadow: 0 0 8px hsla(0,0%,43.1%,.45);
   border-radius: 4px;
   padding: 16px;
   overflow: auto;
   font-size: 18px;
   letter-spacing 1px
-  background-color: #ffffff;
 }
 
 .container hr {
@@ -945,7 +942,7 @@ a.sidebar-link-item.active{
   font-size: 85%;
   border-radius: 3px;
   background: var(--color-code-bg);
-  color: var(--color-code);
+  color: #fff;
 }
 
 .container pre {
@@ -1143,3 +1140,4 @@ h3:not(h2 + h3){
   border-top: 2px dashed #d6d6d6;
   padding-top: 1.5rem;
 }
+

@@ -28,7 +28,9 @@ sessionStorage - 针对一个 session 的数据存储
 
 ## img的srcset属性的作⽤ ## 
 响应式页面中经常用到根据屏幕密度设置不同的图片。这时就用到了 img 标签的srcset属性。srcset属性用于设置不同屏幕密度下，img 会自动加载不同的图片。用法如下：  
-`<img src="image-128.png" srcset="image-256.png 2x" />`
+```
+<img src="image-128.png" srcset="image-256.png 2x" />
+```
 
 ## 文档声明（Doctype）和<!Doctype html>有何作用? 严格模式与混杂模式如何区分？它们有何意义? ## 
 文档声明的作用： 文档声明是为了告诉浏览器，当前HTML文档使用什么版本的HTML来写的，这样浏览器才能按照声明的版本来正确的解析。
