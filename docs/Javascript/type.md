@@ -9,11 +9,22 @@
 3.number  
 4.string  
 5.boolean  
-6.symbol（唯一的常量，用于对象属性保持唯一性，避免被覆盖的情况，实例唯一且不可变）symbol的应用主要在三个方面，防止XSS，私有变量，防止属性被污染  
+6.symbol（唯一的常量，用于对象属性保持唯一性，避免被覆盖的情况，实例唯一且不可变）  
+symbol的应用主要在三个方面，防止XSS，私有变量，防止属性被污染  
 7.bigint  
 8.object（Date，Array，Set，RegExp，Function, Error）  
 
 基本数据类型，存放在栈里，栈的空间大小固定，在变量定义的时候就分配好了内存空间，原始类型是不可变的，操作之后会产生新的值。
+```
+var str = 'abc';
+str.slice(1);
+str.substr(1);
+str.trim(1);
+str.toLowerCase(1);
+str[0] = 1;
+console.log(str);  // abc
+
+```
 引用类型，存放在堆里，存储空间的大小不固定可以动态调整。空间较大，运行效率低。  
 引用类型的值实际存储在堆内存中，在栈里存放固定长度的地址，地址指向堆内存中的值。  
 存放引用的地址是因为引用类型数据比较大，在栈里影响上下文切换的效率以及整个程序执行的效率。引用类型就不再是不可变的了
@@ -64,22 +75,40 @@ function instance(left,right){
 
 ## 深copy和浅copy ## 
 [手写深copy](/Javascript/code1)  
-● 基本实现
-  ○ 递归能力
-● 循环引用
-  ○ 考虑问题的全面性
-  ○ 理解weakmap的真正意义
-● 多种类型
-  ○ 考虑问题的严谨性
-  ○ 创建各种引用类型的方法，JS API的熟练程度
-  ○ 准确的判断数据类型，对数据类型的理解程度
-● 通用遍历：
-  ○ 写代码可以考虑性能优化
-  ○ 了解集中遍历的效率
-  ○ 代码抽象能力
-● 拷贝函数：
-  ○ 箭头函数和普通函数的区别
-  ○ 正则表达式熟练程度
+复制一个变量到另一个变量时，原始类型和引用类型的表现是不一样的
+复制一个基本类型的时候，在内存中创建了一块新的空间存储，虽然两者是相同的，但是两者指向的内存空间完全不同，这两个变量参与任何操作都互不影响。
+当我们复制引用类型的变量时，实际复制的是栈中存储的地址，所以复制出来的新对象和原来的对象指向堆中的同一个对象，因此，改变其中的任何一个变量的值，另一个变量都会受到影响，这就出现了深拷贝和浅拷贝的区别。
+浅拷贝只复制对象的第一层属性，深拷贝是对对象的属性进行递归复制
+Object.assign()是浅拷贝
+
+```
+function clone (target) {
+    if (typeof target === 'object') {
+        let cloneTarget = Array.isArray(target) ? [] : {};
+        for (const key in target) {
+            cloneTarget[key] = clone(target[key]);
+        }
+        return cloneTarget;
+    } else {
+        return target;
+    }
+};
+
+const target = {
+    field1: 1,
+    field2: undefined,
+    field3: {
+        child: 'child'
+    },
+    field4: [2, 4, 8]
+};
+
+console.log(clone(target));
+
+```
+## 函数是值传递 ## 
+ECMAScript 中所有的函数参数都是按值传递的
+当变量是原始类型的时候，这个副本就是值本身，当变量是引用类型时，这个副本就是指向堆内存的地址
 
 
 
