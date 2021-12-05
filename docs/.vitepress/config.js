@@ -65,8 +65,8 @@ function getSidebar () {
             { text: '作用域和作用域链', link: '/Javascript/scope' },
             // { text: '闭包', link: '/Javascript/closure' },
             // { text: 'This', link: '/Javascript/this' },
-            { text: 'ES6', link: '/Javascript/es6' },
-            { text: '手写代码-基础', link: '/Javascript/code1' }
+            { text: '手写代码-基础', link: '/Javascript/code1' },
+            { text: 'ES6', link: '/Javascript/es6' }
           ]
         },
         {
@@ -124,14 +124,18 @@ function getSidebar () {
         { text: 'nginx', link: '/Project/nginx' },
         { text: '持续集成', link: '/Project/cicd' },
         { text: '版本控制', link: '/Project/git' },
-      ]
-    },
-    {
-      text: '模块化',
-      children: [
+        { text: '单元测试', link: '/Project/unitTest' },
+        { text: '错误监控', link: '/Project/errorMonitor' },
         { text: 'ESMoule&CommonJs', link: '/Module/' },
+
       ]
     },
+    // {
+    //   text: '模块化',
+    //   children: [
+    //     { text: 'ESMoule&CommonJs', link: '/Module/' },
+    //   ]
+    // },
     {
       text: '网络',
       children: [
@@ -153,15 +157,15 @@ function getSidebar () {
     {
       text: '安全',
       children: [
-        { text: '前端安全问题', link: '/Security/' },
-        { text: 'XSS', link: '/Security/xss' },
-        { text: 'CSRF', link: '/Security/csrf' },
-        { text: 'SQL注入', link: '/Security/sql' },
-        { text: 'DNS劫持', link: '/Security/dns' },
-        { text: 'HTTP劫持', link: '/Security/http' },
-        { text: 'DDOS', link: '/Security/ddos' },
-        { text: 'Samesite Cookie', link: '/Security/samesite' },
-        { text: '中间人攻击', link: '/Security/attack' }
+        { text: '前端安全问题', link: '/Security/' }
+        // { text: 'XSS', link: '/Security/xss' },
+        // { text: 'CSRF', link: '/Security/csrf' },
+        // { text: 'SQL注入', link: '/Security/sql' },
+        // { text: 'DNS劫持', link: '/Security/dns' },
+        // { text: 'HTTP劫持', link: '/Security/http' },
+        // { text: 'DDOS', link: '/Security/ddos' },
+        // { text: 'Samesite Cookie', link: '/Security/samesite' },
+        // { text: '中间人攻击', link: '/Security/attack' }
       ]
     },
     {

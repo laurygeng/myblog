@@ -192,5 +192,66 @@ function clone(target, map = new WeakMap()) {
 
 
 #### create ####  
-#### 类型判断 ####  
-#### call apply bind ####
+
+```
+function create(obj){
+  function F(){}
+  F.prototype = obj;
+  return new F();
+}
+```
+#### call apply bind ####  
+
+
++ call  
+将函数设置为对象的属性  
+执行&删除这个函数  
+指定this到函数并传入给定参数执行函数  
+如果不传入参数，默认指向window  
+
+```
+Function.prototype.mycall(null){
+	context.fn = this;
+  let args = [];
+  for(let i=1; len=arguments.length; i<len; i++){
+    args.push(arguments[i]);
+  }
+  context.fn(...args);
+  let result = context.fn(...args);
+  delete context.fn;
+  return result;
+}
+```
+
++ apply
+```
+Function.prototype.myapply = function(context, arr){
+  var context = Object(context) || window;
+  context.fn = this;
+  var result;
+  if(!arr){
+    result = context.fn();
+  }else{
+    var args = [];
+    for(var i=0; len=arr.length; i<len; i++){
+    args.push("arr["+i+"]");
+  }
+    result = eval("context.fn("+args+")");
+  }
+  delete context.fn;
+  return result;
+}
+```
+
++ bind
+bind和apply比较大的区别就是在于赋予了方法之后延迟了它们的执行，有一个对象，他想用别人的方法，就可以去bind一下。那bind做了什么呢？
+就是把你自己的参数和原来已经有的方法关联起来，上下文绑定
+```
+Function.prototype.bind = function(contex){
+  var fn = this;
+  var args = Array.prototype.slice(arguments,1);
+  return function(){
+  	return fn.apply(context,args);
+  }
+}
+```
