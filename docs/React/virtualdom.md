@@ -1,4 +1,4 @@
-#### Virtual Dom ####  
+### Virtual Dom ###  
 
 JavaScript类库基于浏览器API实现的概念。UI以一种虚拟的形式存在于内存中，并通过ReactDom等类库于真实的DOM同步，这一过程叫reconcile（协调）DOM操作很慢，耗性能，JS对象处理起来更快更简单，通过Diff算法比对新老vdom之间的差异，可以批量的，最小化的执行dom操作，从而提高性能。 Fibers是一个内部对象，存放组件树的信息也被认为是Virtual DOM实现的一部分。  
 ShadowDOM是一种浏览器技术，主要用于web组件封装变量和CSS。  

@@ -1,20 +1,20 @@
-#### Hooks ####  
+### Hooks ###  
 
 React16.8的新特性，Hooks让函数组件有了状态，可以让你在不编写class的情况下使用state(useState, useReducer)，执行副作(useEffect, useLayoutEffect)。  
 
-#### Hooks主要优势 ####  
+### Hooks主要优势 ###  
 
   + 组件间复用状态逻辑（无需修改组件结构）(自定义Hook)之前的方案：connect到store，render props，高阶组件（嵌套地狱）
   + Hooks并非强制按照生命周期划分，生命周期常常包含不相关的逻辑，例如在componentDidMount,componentDidUpdate中获取数据。但是同一个生命周期中也包含很多其他的逻辑，例如设置事件监听，完全不相关的代码在同一个方法中组合在一起，导致逻辑不一致
   + 解决上述Class组件，难以理解的问题：Hooks将组件中相互关联的部分拆成更小的函数（事件订阅，请求函数）而非强制按照生命周期划分。使用reducer来管理组件内部状态。
   + 在箭头函数没有出现之前，要到constructor里面去进行一次this的绑定
 
-#### Hooks规则 ####  
+### Hooks规则 ###  
 只能在函数最外层调用，不能在循环，条件判断，或者子函数中使用  
 只能在React的函数组件和自定义Hooks中使用  
 因为useState底层采用链表结构实现，有严格的顺序之分  
 
-#### Hooks常用API： ####    
+### Hooks常用API： ###    
 改变状态值：  
 + useState  
 + useRecucer  
@@ -32,21 +32,21 @@ useLayoutEffect：
 应用场景：
 子组件用到了容器组件的某个引用类型的变量或者函数，当容器内部的state更新之后，这些变量和函数都会重新赋值，就会导致子组件使用了memo包裹，也会重新渲染，这个时候就需要使用useMemo和useCallback。  
 
-#### useMemo ####  
+### useMemo ###  
 可以帮我们将变量缓存起来，useCallback可以缓存回调函数，它们的第二个参数和useEffect一样，是一个依赖项数组，通过配置依赖项数组来决定是否更新。  
 
 useMemo（Function组件的pureComponet版本的实现，缓存参数）
 为了避免在每次渲染时都进行高开销的计算，把“创建”函数和依赖项数组作为参数传入useMemo，仅会在某个依赖改变时才重新计算memoized的值，有助于优化  
 
-#### useCallback ####  
+### useCallback ###  
 （缓存函数，比较依赖项有没有发生变化）  
 把内联回调函数以及依赖数组作为参数传入useCallback，它将返回该回调函数的memoized版本，该回调函数仅在某个依赖项改变时才更新，优化非必要渲染的子组件时，将会非常有用。（shouldComponentUpdate）  
 
-#### useRef ####   
+### useRef ###   
 useRef返回一个可变的ref对象，其.current属性被初始化为传入的参数(initialValue)返回的ref对象在组件的整个生命周期内保持不变。
 useImperativeHandle  
 
-#### 复用状态逻辑： ####  
+### 复用状态逻辑： ###  
 
 自定义Hooks：  
 

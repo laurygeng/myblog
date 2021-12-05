@@ -1,18 +1,18 @@
-## 数据类型 ##  
+### 数据类型 ###  
 
 语言类型javascript是一种（弱类型）动态类型语言，在运行过程中需要检查数据类型的语言，还可以发生隐式类型转换  
 
-8种,7种基本数据类型和1种引用类型  
+8种, 7种基本数据类型和1种引用类型  
 
-1.undefined(未定义)（常量）  
-2.null（空对象）（保留关键字）  
-3.number  
-4.string  
-5.boolean  
-6.symbol（唯一的常量，用于对象属性保持唯一性，避免被覆盖的情况，实例唯一且不可变）  
+1. undefined(未定义)（常量）  
+2. null（空对象）（保留关键字）  
+3. number  
+4. string  
+5. boolean  
+6. symbol（唯一的常量，用于对象属性保持唯一性，避免被覆盖的情况，实例唯一且不可变）  
 symbol的应用主要在三个方面，防止XSS，私有变量，防止属性被污染  
-7.bigint  
-8.object（Date，Array，Set，RegExp，Function, Error）  
+7. bigint  
+8. object（Date，Array，Set，RegExp，Function, Error）  
 
 基本数据类型，存放在栈里，栈的空间大小固定，在变量定义的时候就分配好了内存空间，原始类型是不可变的，操作之后会产生新的值。
 ```
@@ -29,7 +29,7 @@ console.log(str);  // abc
 引用类型的值实际存储在堆内存中，在栈里存放固定长度的地址，地址指向堆内存中的值。  
 存放引用的地址是因为引用类型数据比较大，在栈里影响上下文切换的效率以及整个程序执行的效率。引用类型就不再是不可变的了
 
-## 判断数据类型有那些方法？利弊？  ## 
+### 判断数据类型有那些方法？利弊？  ### 
 #### typeof #### 
 判断所有变量的类型，返回值有number，boolean，string，function，object，undefined  
 typeof对于丰富的对象实例，只能返回"Object"字符串  
@@ -73,7 +73,7 @@ function instance(left,right){
 基于引用判等的类型检查都有跨窗口问题，比如instanceof和constructor。  
 总之，如果你要判断的是基本数据类型或JavaScript内置对象，使用toString； 如果要判断的时自定义类型，请使用instanceof。
 
-## 深copy和浅copy ## 
+### 深copy和浅copy ### 
 [手写深copy](/Javascript/code1)  
 复制一个变量到另一个变量时，原始类型和引用类型的表现是不一样的
 复制一个基本类型的时候，在内存中创建了一块新的空间存储，虽然两者是相同的，但是两者指向的内存空间完全不同，这两个变量参与任何操作都互不影响。
@@ -106,7 +106,7 @@ const target = {
 console.log(clone(target));
 
 ```
-## 函数是值传递 ## 
+### 函数是值传递 ### 
 ECMAScript 中所有的函数参数都是按值传递的
 当变量是原始类型的时候，这个副本就是值本身，当变量是引用类型时，这个副本就是指向堆内存的地址
 

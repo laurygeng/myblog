@@ -1,4 +1,4 @@
-## 手写代码-基础 ##  
+### 手写代码-基础 ###  
 
 #### new ####
 ```
@@ -194,4 +194,3 @@ function clone(target, map = new WeakMap()) {
 #### create ####  
 #### 类型判断 ####  
 #### call apply bind ####
-#### 函数柯里化 ####

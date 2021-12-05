@@ -1,4 +1,4 @@
-#### Diff ####  
+### Diff ###  
 
 策略：深度优先，同级比较，借助key判断元素在不同渲染下能保持稳定，有批量新增和删除。
 当节点类型不同时，会卸载老的节点，创建新的节点，触发一个完整的重建流程。卸载老树的时候，老的DOM节点会被销毁，组件实例会执行componentWillUnMount, 创建新树的时候，也会有新的DOM节点插入组件实例会执行componetWillMount和componentDidMount，老树相关的state也会被消除

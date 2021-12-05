@@ -1,4 +1,4 @@
-#### 复用 ####  
+### 复用 ###  
 
 hooks没出现之前就是render Props和高阶组件这两种方式  
 render prop是指在React组件之间使用一个值为函数的prop共享代码的，告知组件需要渲染什么内容的函数prop  

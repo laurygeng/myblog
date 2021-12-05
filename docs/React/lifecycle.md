@@ -1,14 +1,14 @@
-#### lifecycle  ####    
+### lifecycle  ###    
 React生命周期
 
-#### componentDidMount ####
+### componentDidMount ###
 不推荐直接在这个阶段直接调用setState，componentDidMount本身处于一次更新中，我们又调用了一次setState，就会在未来再进行一次render，造成不必要的性能浪费，大多数情况可以设置初始值来搞定。  
 
 当然在componentDidMount我们可以调用接口，再回调中去修改state，这是正确的做法。  
 
 当state初始值依赖dom属性时，在componentDidMount中setState是无法避免的。  
 
-#### render #### 
+### render ### 
 该方法会执行两次，state改变，或者父组件重新render，props发生改变会在重新render
 ReactFiberWorkLoop
 construct:
