@@ -63,6 +63,7 @@ function getSidebar () {
             { text: '原型和原型链', link: '/Javascript/prototype' },
             { text: '继承', link: '/Javascript/inherit' },
             { text: '作用域和作用域链', link: '/Javascript/scope' },
+            { text: '数组', link: '/Javascript/array' },
             // { text: '闭包', link: '/Javascript/closure' },
             // { text: 'This', link: '/Javascript/this' },
             { text: '手写代码-基础', link: '/Javascript/code1' },
@@ -151,7 +152,8 @@ function getSidebar () {
         { text: '本地存储', link: '/Browser/localstore' },
         { text: '同源策略', link: '/Browser/sameorigin' },
         { text: '事件机制', link: '/Browser/eventloop' },
-        { text: '垃圾回收', link: '/Browser/garbage' }
+        { text: '垃圾回收', link: '/Browser/garbage' },
+        { text: '问题', link: '/Browser/issue' }
       ]
     },
     {

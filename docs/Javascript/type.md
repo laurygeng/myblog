@@ -70,6 +70,8 @@ function instance(left,right){
 ==instanceof==适用于检测对象，它是基于原型链运作的；  
 ==constructor==指向的是最初创建者，而且容易伪造，不适合做类型判断；  
 ==Object.prototype.toString==适用于ECMA内置JavaScript类型（包括基本数据类型和内置对象）的类型判断；
+Object.prototype.toString.call([])//'[object Array]'
+'[object Array]'.split(" ")[1].split(""); 
 基于引用判等的类型检查都有跨窗口问题，比如instanceof和constructor。  
 总之，如果你要判断的是基本数据类型或JavaScript内置对象，使用toString； 如果要判断的时自定义类型，请使用instanceof。
 

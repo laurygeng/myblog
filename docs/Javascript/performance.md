@@ -16,16 +16,19 @@ http缓存优化是网页性能优化的重要一环
 
 事件委托其实就是利用JS事件冒泡机制把原本需要绑定在子元素的响应事件（click、keydown……）委托给父元素，让父元素担当事件监听的职务。事件代理的原理是DOM元素的事件冒泡。  
 
-+ webpack模块打包和JavaScript 压缩（如gzip压缩）  
++ webpack模块打包和JavaScript 压缩（如gzip压缩）减小bundle大小  
 + 利用CDN
 + 按需加载资源
++ 浏览器并行下载文件，提供下载速度
 + 在使用 DOM 操作库时用上 array-ids
-+ 缓存优化
++ 独立打包异步组件公共 Bundle，以提高复用性&缓存命中率
++ 缓存优化:静态文件本地缓存，有两种方式分别为HTTP缓存，设置Cache-Control，Last-Modified，Etag等响应头和Service Worker离线缓存
++ 如果在webview中的页面，可以进行页面预加载
 + 避免重定向
 + 启用 HTTP/2
 + 应用性能分析
 + 使用负载均衡方案
-+ 为了更快的启动时间考虑一下同构
++ 为了更快的启动时间考虑一下同构SSR
 + 使用索引加速数据库查询
 + 使用更快的转译方案
 + 避免或最小化 JavaScript 和 CSS 的使用而阻塞渲染
