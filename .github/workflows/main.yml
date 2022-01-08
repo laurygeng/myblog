@@ -35,6 +35,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           username: "root"
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 443
           rm: true
           source: "./docs/.vitepress/dist/*"
           target: "/root/source/myself/dist/"
