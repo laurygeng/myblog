@@ -36,5 +36,5 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           rm: true
           source: "./docs/.vitepress/dist/*"
-          target: "/source/myself/dist/"
+          target: "/source/myblog/dist/"
           strip_components: 3
