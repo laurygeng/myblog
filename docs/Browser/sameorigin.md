@@ -26,3 +26,11 @@ Access-Control-Max-Age: 1728000  // 用来指定本次预检请求的有效期�
 6. Vue框架跨域  
 7. iframe跨域  
 8. WebSocket协议跨域  
+
+### CORS ###  
+CORS是一个W3C标准，全称是"跨域资源共享"（Cross-origin resource sharing）  
+实现CORS通信的关键是服务器。只要服务器实现了CORS接口，就可以跨源通信
+非简单请求的CORS请求，会在正式通信之前，增加一次HTTP查询请求，称为"预检"请求（preflight）  
+
+CORS与JSONP的使用目的相同，但是比JSONP更强大。  
+JSONP只支持GET请求，CORS支持所有类型的HTTP请求。JSONP的优势在于支持老式浏览器，以及可以向不支持CORS的网站请求数据。  
