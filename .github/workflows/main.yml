@@ -32,10 +32,9 @@ jobs:
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.SERVER_IP }}
-          passphrase: ${{ secrets.PASSPHRASE }}
-          username: "root"
+          username: "ubuntu"
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           rm: true
           source: "./docs/.vitepress/dist/*"
-          target: "/root/source/myself/dist/"
+          target: "/source/myself/dist/"
           strip_components: 3
