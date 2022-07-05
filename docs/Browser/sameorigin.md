@@ -13,19 +13,19 @@
 
 ### 解决跨域的方法： ###
 1. 服务端设置跨域：  
-Access-Control-Allow-Origin: http://xxx  // 允许跨域的源地址  
-Access-Control-Allow-Methods: GET, POST, PUT // 服务器支持的所有跨域请求的方法  
-Access-Control-Allow-Headers: X-Custom-Header  // 服务器支持的所有头信息字段  
-Access-Control-Allow-Credentials: true   // 表示是否允许发送Cookie  
+Access-Control-Allow-Origin: http://xxx  // 允许跨域的源地址，它的值要么是请求时Origin字段的值，要么是一个*（表示接受任意域名的请求）。   
+Access-Control-Allow-Methods: GET, POST, PUT // 服务器支持的，允许浏览器在CORS中使用的所有跨域请求的方法    
+Access-Control-Allow-Headers: X-Custom-Header  // 允许浏览器在CORS中发送的头信息。     
+Access-Control-Allow-Credentials: true   // 表示是否允许发送Cookie，默认情况下，Cookie不包括在CORS请求之中。设为true，即表示服务器明确许可，Cookie可以包含在请求中，一起发给服务器。     
 Access-Control-Max-Age: 1728000  // 用来指定本次预检请求的有效期，单位为秒  
 
-2. JSONP
-3. postMessage 跨域
-4. Nginx代理跨域  
-5. NodeJs中间件代理跨域  
-6. Vue框架跨域  
-7. iframe跨域  
-8. WebSocket协议跨域  
+1. JSONP
+2. postMessage 跨域
+3. Nginx代理跨域  
+4. NodeJs中间件代理跨域  
+5. Vue框架跨域  
+6. iframe跨域  
+7. WebSocket协议跨域  
 
 ### CORS ###  
 CORS是一个W3C标准，全称是"跨域资源共享"（Cross-origin resource sharing）  

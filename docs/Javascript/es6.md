@@ -32,6 +32,16 @@ console.log(Object.assign([1,2,3],[4,5]))
 
 
 #### map 和 weak map ####  
+
+Map类似于字符串，只是它的键不是必须是字符串或者数字，可以是任意数据类型。
+Map的实例属性和方法：size，get，set，has，delete，clear
+Map实例的遍历方法：Keys(),values(),entries(),forEach(),
 weakMap对象是一组键/值对的集合，其中键是弱引用，键是对象，值可以是任意的
 弱引用就是指引用的对象可能会在任何时刻被垃圾回收
+
+#### 静态方法 ####   
+为什么要有静态方法？   
+有些东西是不需要实例的，只要有类就存在的，比如Array.isArray(obj);   
+
+
 
